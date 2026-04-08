@@ -1,0 +1,13 @@
+pair_id,repo,field,candidate_value,source,dim,review_state,selected
+pair_1,bugmaker00/My-Homepage,repo_exists,true,github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/My-Homepage,bootstrap_status,failed,github_api_live,dim2,winner,YES
+pair_1,bugmaker00/My-Homepage,bootstrap_status,template_is_healthy,github_api_live_upstream,dim1,informational,NO
+pair_1,bugmaker00/My-Homepage,canonical_owner_repo,bugmaker00/My-Homepage,github_api_live,dim2,winner,YES
+pair_1,bugmaker00/My-Homepage,canonical_owner_repo,academicpages/academicpages.github.io,github_api_live_upstream,dim1,discarded,NO
+pair_1,bugmaker00/My-Homepage,upstream_template_identity,academicpages/academicpages.github.io,github_api_live_upstream,dim1,winner,YES
+pair_1,bugmaker00/My-Homepage,upstream_template_identity,(not set – bootstrap failed),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/My-Homepage,description,Github Pages template based upon HTML and Markdown for personal portfolio-based websites.,github_api_live_upstream,dim1,winner,YES
+pair_1,bugmaker00/My-Homepage,description,(empty – bootstrap failed),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/My-Homepage,license,MIT,github_api_live_upstream,dim1,unchallenged,YES
+pair_1,bugmaker00/My-Homepage,license,MIT,github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/My-Homepage,scope_decision,KEEP,review_analysis,dim1,unchallenged,YES
