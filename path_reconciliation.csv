@@ -1,0 +1,11 @@
+source_path,intended_destination,status,notes
+module_a.py,module_a.py,MAPPED,Primary data-processing source file – stays at repo root
+module_b.py,module_b.py,MAPPED,Primary network-utilities source file – stays at repo root
+tests/test_module_a.py,tests/test_module_a.py,MAPPED,Unit-test file – stays under tests/
+utils/helpers.py,utils/helpers.py,MAPPED,Utility helpers – stays under utils/
+.python_tmp/setup_env.py,N/A – internal tooling,EXTRA,Scaffolding script; TODOs are string literals (template content) not real code-level TODOs
+.python_tmp/check_files.py,N/A – internal tooling,EXTRA,Scaffolding script; no code-level TODO comments
+.python_tmp/git_check.py,N/A – internal tooling,EXTRA,Scaffolding script; no code-level TODO comments
+.python_tmp/list_workspace.py,N/A – internal tooling,EXTRA,Scaffolding script; no code-level TODO comments
+.python_tmp/push_again.py,N/A – internal tooling,EXTRA,Scaffolding script; no code-level TODO comments
+.python_tmp/reinit_git.py,N/A – internal tooling,EXTRA,Scaffolding script; no code-level TODO comments
