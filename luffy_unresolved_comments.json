@@ -1,0 +1,164 @@
+[
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 7,
+    "tag": "TODO",
+    "content": "Add input validation for empty data"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 8,
+    "tag": "TODO",
+    "content": "Implement caching mechanism for repeated calls"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 9,
+    "tag": "TODO",
+    "content": "Add support for streaming data processing"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 14,
+    "tag": "TODO",
+    "content": "Implement proper schema validation"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 15,
+    "tag": "TODO",
+    "content": "Add type hints"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 22,
+    "tag": "TODO",
+    "content": "Implement option handling"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 29,
+    "tag": "TODO",
+    "content": "Load config from file instead of hardcoding"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 30,
+    "tag": "TODO",
+    "content": "Add validation for config parameters"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 35,
+    "tag": "TODO",
+    "content": "Handle network timeout gracefully"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 36,
+    "tag": "TODO",
+    "content": "Add support for batch processing"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 37,
+    "tag": "TODO",
+    "content": "Implement error recovery"
+  },
+  {
+    "file_path": "luffy/module_a.py",
+    "line_number": 41,
+    "tag": "TODO",
+    "content": "Graceful shutdown implementation"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 5,
+    "tag": "TODO",
+    "content": "Add retry logic for failed requests"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 6,
+    "tag": "TODO",
+    "content": "Fix memory leak in connection pool"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 7,
+    "tag": "TODO",
+    "content": "Add connection pooling configuration"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 11,
+    "tag": "TODO",
+    "content": "Add timeout parameter"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 12,
+    "tag": "TODO",
+    "content": "Handle SSL certificate errors"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 13,
+    "tag": "TODO",
+    "content": "Implement exponential backoff"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 18,
+    "tag": "TODO",
+    "content": "Implement request signing"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 19,
+    "tag": "TODO",
+    "content": "Add response compression support"
+  },
+  {
+    "file_path": "luffy/module_b.py",
+    "line_number": 24,
+    "tag": "TODO",
+    "content": "Implement concurrent batch processing"
+  },
+  {
+    "file_path": "luffy/tests/test_module_a.py",
+    "line_number": 3,
+    "tag": "TODO",
+    "content": "Add more test cases"
+  },
+  {
+    "file_path": "luffy/tests/test_module_a.py",
+    "line_number": 4,
+    "tag": "TODO",
+    "content": "Mock external dependencies"
+  },
+  {
+    "file_path": "luffy/tests/test_module_a.py",
+    "line_number": 7,
+    "tag": "TODO",
+    "content": "Test edge cases"
+  },
+  {
+    "file_path": "luffy/utils/helpers.py",
+    "line_number": 3,
+    "tag": "TODO",
+    "content": "add support for multi-threading"
+  },
+  {
+    "file_path": "luffy/utils/helpers.py",
+    "line_number": 4,
+    "tag": "TODO",
+    "content": "Race condition in concurrent access"
+  },
+  {
+    "file_path": "luffy/utils/helpers.py",
+    "line_number": 8,
+    "tag": "TODO",
+    "content": "Support custom formatting templates"
+  }
+]
