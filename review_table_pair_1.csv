@@ -1,0 +1,25 @@
+pair_id,repo,field,candidate_value,source,dim,review_state,selected
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,repo_exists,false,github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,bootstrap_status,not_started – GitHub mirror absent,github_api_live,dim2,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,bootstrap_status,source_is_healthy,huggingface_api_live,dim1,informational,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,canonical_owner_repo,dongbobo/Annoy-PyEdu-Rs-Raw,huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,canonical_owner_repo,(not set – GitHub mirror absent),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,upstream_template_identity,dongbobo/Annoy-PyEdu-Rs-Raw,huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,upstream_template_identity,(not set – GitHub mirror absent),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,description,Raw Python educational resource dataset (CodeI/O spec_* format),huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,description,(empty – GitHub mirror absent),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,license,(null – no license specified),huggingface_api_live,dim1,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,license,(null – GitHub mirror absent),github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs-Raw,scope_decision,KEEP,review_analysis,dim1,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,repo_exists,false,github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,bootstrap_status,not_started – GitHub mirror absent,github_api_live,dim2,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,bootstrap_status,source_is_healthy,huggingface_api_live,dim1,informational,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs,canonical_owner_repo,dongbobo/Annoy-PyEdu-Rs,huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,canonical_owner_repo,dongbobo/Annoy-Pyedu-Rs (README casing variant),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs,upstream_template_identity,dongbobo/Annoy-PyEdu-Rs,huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,upstream_template_identity,(not set – GitHub mirror absent),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs,description,Processed Python educational resource dataset with explanations (spec_* naming),huggingface_api_live,dim1,winner,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,description,(empty – GitHub mirror absent),github_api_live,dim2,discarded,NO
+pair_1,bugmaker00/Annoy-PyEdu-Rs,license,(null – no license specified),huggingface_api_live,dim1,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,license,(null – GitHub mirror absent),github_api_live,dim2,unchallenged,YES
+pair_1,bugmaker00/Annoy-PyEdu-Rs,scope_decision,KEEP,review_analysis,dim1,unchallenged,YES
