@@ -2,8 +2,9 @@
 
 ### 📝 Complete TODO List
 
-| File Path | Line | TODO Comment |
-|-----------|-----:|--------------|
+| file_path | line_number | task |
+|-----------|------------:|------|
+| `.python_tmp/setup_env.py` | 14 | Create some Python files with TODO comments |
 | `module_a.py` | 7 | Add input validation for empty data |
 | `module_a.py` | 8 | Implement caching mechanism for repeated calls |
 | `module_a.py` | 9 | Add support for streaming data processing |
@@ -31,7 +32,6 @@
 | `utils/helpers.py` | 3 | add support for multi-threading |
 | `utils/helpers.py` | 4 | Race condition in concurrent access |
 | `utils/helpers.py` | 8 | Support custom formatting templates |
-| `.python_tmp/setup_env.py` | 14 | Create some Python files with TODO comments |
 
 ### 🧯 FIXME List
 
