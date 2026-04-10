@@ -31,6 +31,7 @@
 | `utils/helpers.py` | 3 | add support for multi-threading |
 | `utils/helpers.py` | 4 | Race condition in concurrent access |
 | `utils/helpers.py` | 8 | Support custom formatting templates |
+| `.python_tmp/setup_env.py` | 14 | Create some Python files with TODO comments |
 
 ### 🧯 FIXME List
 
@@ -38,8 +39,8 @@
 
 ### 🔎 Python Backlog Snapshot
 
-> **Branch:** `dev` · **Scanned:** 2026-04-10 16:55 UTC  
-> **Python files scanned:** 4 · **Files with items:** 4 · **TODOs:** 27 · **FIXMEs:** 0
+> **Branch:** `dev` · **Scanned:** 2026-04-10 17:09 UTC  
+> **Python files scanned:** 10 · **Files with items:** 5 · **TODOs:** 28 · **FIXMEs:** 0
 
 | file | TODOs | FIXMEs |
 |------|------:|-------:|
@@ -47,6 +48,7 @@
 | `module_b.py` | 9 | 0 |
 | `tests/test_module_a.py` | 3 | 0 |
 | `utils/helpers.py` | 3 | 0 |
+| `.python_tmp/setup_env.py` | 1 | 0 |
 
 _Full inventory: [`python_backlog_inventory.csv`](python_backlog_inventory.csv)_
 
