@@ -1,0 +1,28 @@
+todo_id,source_file,readme_coordinate,scan_coordinate,canonical_coordinate,todo_tag,todo_text,path_contested,coordinate_match,resolution,review_decision
+module_a.py:7,module_a.py,src/nebula/module_a.py:7,module_a.py:7,module_a.py:7,plain,Add input validation for empty data,YES,NO,scan_result,KEEP
+module_a.py:8,module_a.py,src/nebula/module_a.py:8,module_a.py:8,module_a.py:8,plain,Implement caching mechanism for repeated calls,YES,NO,scan_result,KEEP
+module_a.py:9,module_a.py,src/nebula/module_a.py:9,module_a.py:9,module_a.py:9,dev,Add support for streaming data processing,YES,NO,scan_result,KEEP
+module_a.py:14,module_a.py,src/nebula/module_a.py:14,module_a.py:14,module_a.py:14,plain,Implement proper schema validation,YES,NO,scan_result,KEEP
+module_a.py:15,module_a.py,src/nebula/module_a.py:15,module_a.py:15,module_a.py:15,dev,Add type hints,YES,NO,scan_result,KEEP
+module_a.py:22,module_a.py,src/nebula/module_a.py:22,module_a.py:22,module_a.py:22,dev,Implement option handling,YES,NO,scan_result,KEEP
+module_a.py:29,module_a.py,src/nebula/module_a.py:29,module_a.py:29,module_a.py:29,plain,Load config from file instead of hardcoding,YES,NO,scan_result,KEEP
+module_a.py:30,module_a.py,src/nebula/module_a.py:30,module_a.py:30,module_a.py:30,dev,Add validation for config parameters,YES,NO,scan_result,KEEP
+module_a.py:35,module_a.py,src/nebula/module_a.py:35,module_a.py:35,module_a.py:35,warning,Handle network timeout gracefully,YES,NO,scan_result,KEEP
+module_a.py:36,module_a.py,src/nebula/module_a.py:36,module_a.py:36,module_a.py:36,future,Add support for batch processing,YES,NO,scan_result,KEEP
+module_a.py:37,module_a.py,src/nebula/module_a.py:37,module_a.py:37,module_a.py:37,dev,Implement error recovery,YES,NO,scan_result,KEEP
+module_a.py:41,module_a.py,src/nebula/module_a.py:41,module_a.py:41,module_a.py:41,dev,Graceful shutdown implementation,YES,NO,scan_result,KEEP
+module_b.py:5,module_b.py,src/nebula/module_b.py:5,module_b.py:5,module_b.py:5,plain,Add retry logic for failed requests,YES,NO,scan_result,KEEP
+module_b.py:6,module_b.py,src/nebula/module_b.py:6,module_b.py:6,module_b.py:6,bug,Fix memory leak in connection pool,YES,NO,scan_result,KEEP
+module_b.py:7,module_b.py,src/nebula/module_b.py:7,module_b.py:7,module_b.py:7,dev,Add connection pooling configuration,YES,NO,scan_result,KEEP
+module_b.py:11,module_b.py,src/nebula/module_b.py:11,module_b.py:11,module_b.py:11,plain,Add timeout parameter,YES,NO,scan_result,KEEP
+module_b.py:12,module_b.py,src/nebula/module_b.py:12,module_b.py:12,module_b.py:12,plain,Handle SSL certificate errors,YES,NO,scan_result,KEEP
+module_b.py:13,module_b.py,src/nebula/module_b.py:13,module_b.py:13,module_b.py:13,dev,Implement exponential backoff,YES,NO,scan_result,KEEP
+module_b.py:18,module_b.py,src/nebula/module_b.py:18,module_b.py:18,module_b.py:18,plain,Implement request signing,YES,NO,scan_result,KEEP
+module_b.py:19,module_b.py,src/nebula/module_b.py:19,module_b.py:19,module_b.py:19,dev,Add response compression support,YES,NO,scan_result,KEEP
+module_b.py:24,module_b.py,src/nebula/module_b.py:24,module_b.py:24,module_b.py:24,dev,Implement concurrent batch processing,YES,NO,scan_result,KEEP
+tests/test_module_a.py:3,tests/test_module_a.py,tests/test_module_a.py:3,tests/test_module_a.py:3,tests/test_module_a.py:3,plain,Add more test cases,NO,YES,unchallenged,KEEP
+tests/test_module_a.py:4,tests/test_module_a.py,tests/test_module_a.py:4,tests/test_module_a.py:4,tests/test_module_a.py:4,plain,Mock external dependencies,NO,YES,unchallenged,KEEP
+tests/test_module_a.py:7,tests/test_module_a.py,tests/test_module_a.py:7,tests/test_module_a.py:7,tests/test_module_a.py:7,plain,Test edge cases,NO,YES,unchallenged,KEEP
+utils/helpers.py:3,utils/helpers.py,utils/helpers.py:3,utils/helpers.py:3,utils/helpers.py:3,plain,add support for multi-threading,NO,YES,unchallenged,KEEP
+utils/helpers.py:4,utils/helpers.py,utils/helpers.py:4,utils/helpers.py:4,utils/helpers.py:4,bugfix,Race condition in concurrent access,NO,YES,unchallenged,KEEP
+utils/helpers.py:8,utils/helpers.py,utils/helpers.py:8,utils/helpers.py:8,utils/helpers.py:8,plain,Support custom formatting templates,NO,YES,unchallenged,KEEP
