@@ -1,0 +1,283 @@
+{
+  "_meta": {
+    "repo": "mcpmark-eval-1031/LUFFY",
+    "task": "conflict-resolution-staged",
+    "source_rule": "live_file_scan > readme_snapshot_9818ab44 > review_branch_snapshot > readme_snapshot_main",
+    "policy_file": "source_priority.md",
+    "conflict_file": "conflict_resolution.csv",
+    "snapshot_main_sha": "fbe7a135c822",
+    "snapshot_prev_sha": "9818ab44c0f4",
+    "items_with_path_conflict_fixed": 21,
+    "items_unchanged": 6,
+    "total_items": 27
+  },
+  "module_directory_structure": {
+    "chosen_value": "module_a.py and module_b.py reside at the repo root (no src/nebula/ sub-directory exists)",
+    "chosen_source": "live_file_scan"
+  },
+  "todo_path_prefix.module_a": {
+    "chosen_value": "module_a.py",
+    "rejected_value": "src/nebula/module_a.py",
+    "rejected_source": "readme_snapshot_main",
+    "chosen_source": "live_file_scan",
+    "rationale": "src/nebula/ directory does not exist in the repository; live_file_scan and two corroborating snapshots agree on root-relative path"
+  },
+  "todo_path_prefix.module_b": {
+    "chosen_value": "module_b.py",
+    "rejected_value": "src/nebula/module_b.py",
+    "rejected_source": "readme_snapshot_main",
+    "chosen_source": "live_file_scan",
+    "rationale": "src/nebula/ directory does not exist; live_file_scan and two corroborating snapshots agree on root-relative path"
+  },
+  "todo_tag_representation": {
+    "chosen_value": "stripped (bare description without parenthetical label)",
+    "chosen_source": "readme_snapshot_9818ab44 and readme_snapshot_main (both strip tags)",
+    "rationale": "Both README snapshots agree on stripping; no conflict with convention; raw tags preserved in source code only"
+  },
+  "todo_checklist_items": {
+    "module_a.py:7": {
+      "file_path": "module_a.py",
+      "line_number": 7,
+      "description": "Add input validation for empty data",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:7",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:8": {
+      "file_path": "module_a.py",
+      "line_number": 8,
+      "description": "Implement caching mechanism for repeated calls",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:8",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:9": {
+      "file_path": "module_a.py",
+      "line_number": 9,
+      "description": "Add support for streaming data processing",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:9",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:14": {
+      "file_path": "module_a.py",
+      "line_number": 14,
+      "description": "Implement proper schema validation",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:14",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:15": {
+      "file_path": "module_a.py",
+      "line_number": 15,
+      "description": "Add type hints",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:15",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:22": {
+      "file_path": "module_a.py",
+      "line_number": 22,
+      "description": "Implement option handling",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:22",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:29": {
+      "file_path": "module_a.py",
+      "line_number": 29,
+      "description": "Load config from file instead of hardcoding",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:29",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:30": {
+      "file_path": "module_a.py",
+      "line_number": 30,
+      "description": "Add validation for config parameters",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:30",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:35": {
+      "file_path": "module_a.py",
+      "line_number": 35,
+      "description": "Handle network timeout gracefully",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:35",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:36": {
+      "file_path": "module_a.py",
+      "line_number": 36,
+      "description": "Add support for batch processing",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:36",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:37": {
+      "file_path": "module_a.py",
+      "line_number": 37,
+      "description": "Implement error recovery",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:37",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_a.py:41": {
+      "file_path": "module_a.py",
+      "line_number": 41,
+      "description": "Graceful shutdown implementation",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_a.py:41",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:5": {
+      "file_path": "module_b.py",
+      "line_number": 5,
+      "description": "Add retry logic for failed requests",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:5",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:6": {
+      "file_path": "module_b.py",
+      "line_number": 6,
+      "description": "Fix memory leak in connection pool",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:6",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:7": {
+      "file_path": "module_b.py",
+      "line_number": 7,
+      "description": "Add connection pooling configuration",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:7",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:11": {
+      "file_path": "module_b.py",
+      "line_number": 11,
+      "description": "Add timeout parameter",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:11",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:12": {
+      "file_path": "module_b.py",
+      "line_number": 12,
+      "description": "Handle SSL certificate errors",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:12",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:13": {
+      "file_path": "module_b.py",
+      "line_number": 13,
+      "description": "Implement exponential backoff",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:13",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:18": {
+      "file_path": "module_b.py",
+      "line_number": 18,
+      "description": "Implement request signing",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:18",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:19": {
+      "file_path": "module_b.py",
+      "line_number": 19,
+      "description": "Add response compression support",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:19",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "module_b.py:24": {
+      "file_path": "module_b.py",
+      "line_number": 24,
+      "description": "Implement concurrent batch processing",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "module_b.py:24",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": true
+    },
+    "tests/test_module_a.py:3": {
+      "file_path": "tests/test_module_a.py",
+      "line_number": 3,
+      "description": "Add more test cases",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "tests/test_module_a.py:3",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    },
+    "tests/test_module_a.py:4": {
+      "file_path": "tests/test_module_a.py",
+      "line_number": 4,
+      "description": "Mock external dependencies",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "tests/test_module_a.py:4",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    },
+    "tests/test_module_a.py:7": {
+      "file_path": "tests/test_module_a.py",
+      "line_number": 7,
+      "description": "Test edge cases",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "tests/test_module_a.py:7",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    },
+    "utils/helpers.py:3": {
+      "file_path": "utils/helpers.py",
+      "line_number": 3,
+      "description": "add support for multi-threading",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "utils/helpers.py:3",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    },
+    "utils/helpers.py:4": {
+      "file_path": "utils/helpers.py",
+      "line_number": 4,
+      "description": "Race condition in concurrent access",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "utils/helpers.py:4",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    },
+    "utils/helpers.py:8": {
+      "file_path": "utils/helpers.py",
+      "line_number": 8,
+      "description": "Support custom formatting templates",
+      "checkbox_status": "unchecked",
+      "qualified_ref": "utils/helpers.py:8",
+      "chosen_source": "live_file_scan",
+      "path_conflict_fixed": false
+    }
+  },
+  "resolved_readme_checklist_block": "<!-- auto-generated by scanning Python source TODOs -->\n<!-- sorted by (file, line); 27 items -->\n\n- [ ] `module_a.py:7` \u2014 Add input validation for empty data\n- [ ] `module_a.py:8` \u2014 Implement caching mechanism for repeated calls\n- [ ] `module_a.py:9` \u2014 Add support for streaming data processing\n- [ ] `module_a.py:14` \u2014 Implement proper schema validation\n- [ ] `module_a.py:15` \u2014 Add type hints\n- [ ] `module_a.py:22` \u2014 Implement option handling\n- [ ] `module_a.py:29` \u2014 Load config from file instead of hardcoding\n- [ ] `module_a.py:30` \u2014 Add validation for config parameters\n- [ ] `module_a.py:35` \u2014 Handle network timeout gracefully\n- [ ] `module_a.py:36` \u2014 Add support for batch processing\n- [ ] `module_a.py:37` \u2014 Implement error recovery\n- [ ] `module_a.py:41` \u2014 Graceful shutdown implementation\n- [ ] `module_b.py:5` \u2014 Add retry logic for failed requests\n- [ ] `module_b.py:6` \u2014 Fix memory leak in connection pool\n- [ ] `module_b.py:7` \u2014 Add connection pooling configuration\n- [ ] `module_b.py:11` \u2014 Add timeout parameter\n- [ ] `module_b.py:12` \u2014 Handle SSL certificate errors\n- [ ] `module_b.py:13` \u2014 Implement exponential backoff\n- [ ] `module_b.py:18` \u2014 Implement request signing\n- [ ] `module_b.py:19` \u2014 Add response compression support\n- [ ] `module_b.py:24` \u2014 Implement concurrent batch processing\n- [ ] `tests/test_module_a.py:3` \u2014 Add more test cases\n- [ ] `tests/test_module_a.py:4` \u2014 Mock external dependencies\n- [ ] `tests/test_module_a.py:7` \u2014 Test edge cases\n- [ ] `utils/helpers.py:3` \u2014 add support for multi-threading\n- [ ] `utils/helpers.py:4` \u2014 Race condition in concurrent access\n- [ ] `utils/helpers.py:8` \u2014 Support custom formatting templates"
+}
