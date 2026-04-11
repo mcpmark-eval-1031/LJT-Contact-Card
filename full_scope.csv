@@ -1,0 +1,5 @@
+file_path,blob_sha_main,size_bytes_main,todo_count_main,tag_distribution_main,review_status,pilot_subset,change_applied,todos_resolved,todos_remaining,summary
+module_a.py,83c055ab41661b81774f1e4e88efffb67b1e0162,1267,12,"plain:4,dev:6,warning:1,future:1",reviewed,no,pending,0,12,All 12 TODOs deferred; module_a.py pilot was addressed in review/changeset-v1
+module_b.py,f04fe17a92c1cf2a5e0237c60afbd111034c5696,682,9,"plain:4,bug:1,dev:4",reviewed,yes,applied,4,5,"Pilot: retry-logic (L5) + timeout-param (L11) + SSL-handling (L12) + exponential-backoff (L13) implemented; 5 TODOs retained"
+tests/test_module_a.py,5c41895d0de522f31c272cf7fca7d438a9937ec0,153,3,"plain:3",reviewed,no,pending,0,3,All 3 TODOs deferred to next sprint
+utils/helpers.py,3e4017ace1e7c68eda40bd31a3c75b277f5fadbf,252,3,"plain:2,bugfix:1",reviewed,no,pending,0,3,All 3 TODOs deferred; utils/helpers.py pilot was addressed in review/changeset-v1
