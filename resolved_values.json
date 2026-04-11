@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "repo_pair": {
+      "upstream_template": "academicpages/academicpages.github.io",
+      "fork_destination": "bugmaker00/My-Homepage"
+    },
+    "task": "finalpool-personal-website-construct_10",
+    "source_rule": "github_api_live > github_api_live_upstream > readme_opening_upstream > review_analysis > review_snapshot_task9",
+    "bootstrap_failure_exception": "When github_api_live returns an empty/null/failure-marker value (destination size: 0, fork: false), github_api_live_upstream is used as fallback for that field",
+    "policy_file": "source_priority.md",
+    "conflict_file": "conflict_resolution.csv",
+    "prior_review_branch": "review/personal-website-construct-finalpool-9",
+    "snapshot_github_api_live": "2026-04-11T23:28:20Z",
+    "snapshot_github_api_live_upstream": "2026-04-08T17:19:38Z",
+    "note": "bugmaker00/My-Homepage was recreated between task-9 (created_at: 2026-04-08T20:43:49Z) and task-10 (created_at: 2026-04-11T23:28:16Z); bootstrap failure persists"
+  },
+  "bootstrap_status": {
+    "chosen_value": "failed",
+    "chosen_source": "github_api_live",
+    "rationale": "Destination has size: 0 and fork: false. No template content was propagated. github_api_live is unconditionally authoritative for the destination's actual state.",
+    "action_required": "Re-plan bootstrap phase to propagate template content from academicpages/academicpages.github.io to bugmaker00/My-Homepage"
+  },
+  "canonical_owner_repo": {
+    "chosen_value": "bugmaker00/My-Homepage",
+    "chosen_source": "github_api_live",
+    "rationale": "Destination retains its own namespace identity. github_api_live wins unconditionally for this field. The upstream template path is recorded separately in upstream_template_identity.",
+    "rejected_candidate": "academicpages/academicpages.github.io",
+    "rejected_source": "github_api_live_upstream"
+  },
+  "upstream_template_identity": {
+    "chosen_value": "academicpages/academicpages.github.io",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination template_repository field is absent because the bootstrap failed. Bootstrap-failure exception applies; github_api_live_upstream wins. Upstream self-identifies as is_template: true (repo_id: 68287594, MIT license, 16787 stars, last push 2026-04-08T17:19:38Z).",
+    "rejected_candidate": "(not set \u2014 bootstrap failed; template_repository field absent on destination)",
+    "rejected_source": "github_api_live"
+  },
+  "description": {
+    "chosen_value": "Github Pages template based upon HTML and Markdown for personal, portfolio-based websites.",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination description is empty (bootstrap failed \u2192 exception applies). Upstream API description is the intended inherited value pending user customisation after a successful bootstrap. The comma after 'personal' is present in the live API text and in all authoritative snapshots; its absence in review_table_pair_1.csv is a transcription artefact.",
+    "candidates_considered": [
+      {
+        "value": "(empty \u2014 bootstrap failed)",
+        "source": "github_api_live",
+        "disposition": "rejected \u2014 bootstrap-failure exception triggered"
+      },
+      {
+        "value": "Github Pages template based upon HTML and Markdown for personal, portfolio-based websites.",
+        "source": "github_api_live_upstream",
+        "disposition": "chosen"
+      },
+      {
+        "value": "Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.",
+        "source": "readme_opening_upstream",
+        "disposition": "corroborating \u2014 consistent in meaning; superseded by upstream API field per priority order"
+      },
+      {
+        "value": "Github Pages template based upon HTML and Markdown for personal portfolio-based websites.",
+        "source": "review_snapshot_pair1 (review_table_pair_1.csv)",
+        "disposition": "rejected \u2014 transcription artefact (missing comma after 'personal'); live API text is verbatim authoritative"
+      }
+    ]
+  },
+  "default_branch": {
+    "chosen_value": "master",
+    "chosen_source": "github_api_live",
+    "rationale": "Unchallenged \u2014 both github_api_live and github_api_live_upstream agree on 'master'. github_api_live is cited as primary per convention."
+  },
+  "language": {
+    "chosen_value": "SCSS",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination language 'HTML' is only an initialization artifact (bootstrap failed \u2192 exception applies). The upstream template's true primary language is SCSS, accounting for the full 58150 kB of template content.",
+    "rejected_candidate": "HTML (initialization artifact only; full template content absent)",
+    "rejected_source": "github_api_live"
+  },
+  "homepage": {
+    "chosen_value": "https://academicpages.github.io",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination homepage field is not set (bootstrap failed \u2192 exception applies). Upstream template carries the authoritative homepage URL.",
+    "rejected_candidate": "(not set)",
+    "rejected_source": "github_api_live"
+  },
+  "license": {
+    "chosen_value": "MIT",
+    "chosen_source": "github_api_live",
+    "rationale": "Unchallenged \u2014 both github_api_live and github_api_live_upstream agree on MIT. github_api_live is cited as primary per convention."
+  },
+  "topics": {
+    "chosen_value": [
+      "academic-website",
+      "github-pages",
+      "jekyll",
+      "jekyll-theme",
+      "markdown",
+      "personal-website",
+      "portfolio-website"
+    ],
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination topic list is empty (bootstrap failed \u2192 exception applies). Upstream carries 7 canonical topics describing the template's purpose and technology stack.",
+    "rejected_candidate": "(empty)",
+    "rejected_source": "github_api_live"
+  },
+  "is_template": {
+    "chosen_value": false,
+    "chosen_source": "github_api_live",
+    "rationale": "An instantiated destination repository should not itself be flagged as a GitHub template. github_api_live correctly reports false. The upstream value of true applies only to the source template repository.",
+    "rejected_candidate": "true (upstream template status \u2014 not applicable to instantiated destination)",
+    "rejected_source": "github_api_live_upstream"
+  },
+  "fork": {
+    "chosen_value": false,
+    "chosen_source": "github_api_live",
+    "rationale": "Unchallenged \u2014 both sources agree on false. The destination was created as a standalone repository, not via GitHub's fork mechanism. Template instantiation failure does not equate to fork: true."
+  },
+  "size": {
+    "chosen_value": 58150,
+    "chosen_value_unit": "kB (GitHub API units)",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Destination size: 0 is the direct result of the bootstrap failure (exception applies). The upstream template size of 58150 kB represents the expected content footprint after a successful bootstrap.",
+    "rejected_candidate": 0,
+    "rejected_candidate_note": "Bootstrap failure marker \u2014 not the intended final state of the repository",
+    "rejected_source": "github_api_live"
+  },
+  "destination.created_at": {
+    "chosen_value": "2026-04-11T23:28:16Z",
+    "chosen_source": "github_api_live",
+    "rationale": "Current live snapshot reflects repository recreation for the task-10 run. The prior task-9 instance (created_at: 2026-04-08T20:43:49Z) no longer exists at this identity; the new instance was created 2026-04-11. github_api_live always wins for destination identity fields.",
+    "rejected_candidate": "2026-04-08T20:43:49Z",
+    "rejected_source": "review_snapshot_task9"
+  },
+  "destination.pushed_at": {
+    "chosen_value": "2026-04-11T23:28:20Z",
+    "chosen_source": "github_api_live",
+    "rationale": "Current live snapshot date for task-10 run. Supersedes prior task-9 snapshot (2026-04-09T00:18:30Z) for all task-10 resolution purposes.",
+    "rejected_candidate": "2026-04-09T00:18:30Z",
+    "rejected_source": "review_snapshot_task9"
+  },
+  "upstream.stargazers_count": {
+    "chosen_value": 16787,
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Current live snapshot (16787 stars as of 2026-04-11) supersedes the prior task-9 snapshot value (16759). Live source always wins for snapshot-comparison fields.",
+    "rejected_candidate": 16759,
+    "rejected_source": "review_snapshot_task9"
+  },
+  "upstream.updated_at": {
+    "chosen_value": "2026-04-11T22:16:44Z",
+    "chosen_source": "github_api_live_upstream",
+    "rationale": "Current live snapshot (2026-04-11T22:16:44Z) supersedes the prior task-9 snapshot value (2026-04-08T19:37:47Z). Live source always wins for snapshot-comparison fields.",
+    "rejected_candidate": "2026-04-08T19:37:47Z",
+    "rejected_source": "review_snapshot_task9"
+  },
+  "scope_decision": {
+    "chosen_value": "KEEP",
+    "chosen_source": "review_analysis",
+    "rationale": "Single authoritative source for this derived field. Destination repository exists (blocking prerequisite satisfied); upstream template is identified and accessible (is_template: true); bootstrap failure is documented and actionable.",
+    "reference": "review/personal-website-construct-pair-1 \u2014 decision_summary_pair_1.md"
+  }
+}
