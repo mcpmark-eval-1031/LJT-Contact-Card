@@ -2,7 +2,8 @@
 
 **Review branch:** `review/personal-website-construct-finalpool-8`  
 **Base commit (inherited from finalpool):** `15df6812c241d88b9821f2f5b1b3c1d487954dcf`  
-**Scope source-of-truth:** `full_scope.csv` (11 scope rows)  
+**Stage commit:** `ebbe42aafb6d1d230bbc0e9ea3d4ca52bf63e747`  
+**Scope source-of-truth:** `full_scope.csv` (SHA `e84140e1097812cd0d9d147cb547d8923ae1492d`, 1313 bytes, 11 scope rows)  
 **Audit generated:** 2026-04-12  
 **Subject pair:** `bugmaker00/My-Homepage` ← `academicpages/academicpages.github.io`  
 
@@ -47,7 +48,7 @@ beyond the scope rows above (session-8 audit artifacts and base-inherited items)
 
 | file_path | note |
 |-----------|------|
-| `full_scope.csv` | Session-8 scope index (self-referential; not audited against itself) |
+| `full_scope.csv` | Session-8 scope index (SHA `e84140e1`, 1313 B; self-referential — not audited against itself) |
 | `readback_audit.md` | This document |
 | `.python_tmp/` | Inherited from finalpool base (ephemeral scratch directory) |
 
@@ -101,3 +102,6 @@ As documented in `decision_summary_pair_1.md` and `resolved_values.json`:
 All 11 files in `full_scope.csv` are present on `review/personal-website-construct-finalpool-8`
 with exact blob-SHA and byte-size matches. The live state of the review branch is
 **fully consistent** with the saved scope. No discrepancies detected.
+
+Stage commit `ebbe42aa` successfully reconstructed the complete reviewed change set
+for `finalpool-personal-website-construct_8`.
