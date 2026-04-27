@@ -5,7 +5,7 @@
     "scope_surface": "scope_matrix_single_2.csv",
     "source_rule": "github_api_live > readme_opening > target_set_csv",
     "snapshot_date": "2026-04-08",
-    "live_verification_date": "2026-04-12",
+    "live_verification_date": "2026-04-27",
     "review_branch": "review/scope-matrix-single-2",
     "upstream_evidence": [
       "source_resolution_single_2.csv (34 rows, 25 selected=YES) @ review/source-resolution-single-2",
@@ -22,7 +22,7 @@
       "google-gemini/gemini-cli": "EXISTS — confirmed at main HEAD",
       "QwenLM/Qwen3-Coder": "EXISTS — confirmed at main HEAD",
       "QwenLM/Qwen3-TTS": "EXISTS — confirmed at main HEAD",
-      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD; All-Hands-AI org redirect still active"
+      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD; description updated to owner-set emoji; All-Hands-AI org redirect still active"
     }
   },
   "repos": {
@@ -76,7 +76,7 @@
       },
       "contested_fields": ["description"],
       "_notes": {
-        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-04-12"
+        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-04-27"
       },
       "scope_decision": "KEEP"
     },
@@ -101,7 +101,7 @@
       "project_name": "OpenHands",
       "original_url_from_playlist": "https://github.com/All-Hands-AI/OpenHands",
       "canonical_owner_repo": "OpenHands/OpenHands",
-      "description": "OpenHands: AI-Driven Development",
+      "description": "🙌 OpenHands: AI-Driven Development",
       "license": "Other (NOASSERTION)",
       "redirect_detected": true,
       "field_sources": {
@@ -113,9 +113,9 @@
       },
       "contested_fields": ["canonical_owner_repo", "description", "license"],
       "_notes": {
-        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-04-12",
-        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-04-12; github_api_live is authoritative",
-        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note"
+        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-04-27",
+        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-04-27; github_api_live is authoritative",
+        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note; updated 2026-04-27 to owner-set emoji string"
       },
       "scope_decision": "KEEP"
     }
