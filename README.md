@@ -39,3 +39,14 @@ pip install -r requirements.txt
 ## Usage
 
 Refer to individual module documentation.
+
+### 🔎 Python Backlog Snapshot
+
+The `dev` branch currently tracks **27** TODOs and **0** FIXMEs across **4** Python files.
+
+| file | TODOs | FIXMEs |
+|---|---|---|
+| module_a.py | 12 | 0 |
+| module_b.py | 9 | 0 |
+| tests/test_module_a.py | 3 | 0 |
+| utils/helpers.py | 3 | 0 |
