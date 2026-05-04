@@ -4,6 +4,44 @@
 
 | file_path | line_number | content |
 |-----------|-------------|---------|
+| .python_tmp/setup_env.py | 22 | Add input validation for empty data |
+| .python_tmp/setup_env.py | 23 | Implement caching mechanism for repeated calls |
+| .python_tmp/setup_env.py | 28 | Implement proper schema validation |
+| .python_tmp/setup_env.py | 37 | Load config from file instead of hardcoding |
+| .python_tmp/setup_env.py | 42 | Handle network timeout gracefully |
+| .python_tmp/setup_env.py | 43 | Add support for batch processing |
+| .python_tmp/setup_env.py | 50 | Add retry logic for failed requests |
+| .python_tmp/setup_env.py | 51 | Fix memory leak in connection pool |
+| .python_tmp/setup_env.py | 55 | Add timeout parameter |
+| .python_tmp/setup_env.py | 56 | Handle SSL certificate errors |
+| .python_tmp/setup_env.py | 61 | Implement request signing |
+| .python_tmp/setup_env.py | 66 | add support for multi-threading |
+| .python_tmp/setup_env.py | 67 | Race condition in concurrent access |
+| .python_tmp/setup_env.py | 71 | Support custom formatting templates |
+| .python_tmp/setup_env.py | 76 | Add more test cases |
+| .python_tmp/setup_env.py | 77 | Mock external dependencies |
+| .python_tmp/setup_env.py | 80 | Test edge cases |
+| .python_tmp/setup_env.py | 132 | Add input validation for empty data |
+| .python_tmp/setup_env.py | 133 | Implement caching mechanism for repeated calls |
+| .python_tmp/setup_env.py | 134 | Add support for streaming data processing |
+| .python_tmp/setup_env.py | 139 | Implement proper schema validation |
+| .python_tmp/setup_env.py | 140 | Add type hints |
+| .python_tmp/setup_env.py | 147 | Implement option handling |
+| .python_tmp/setup_env.py | 154 | Load config from file instead of hardcoding |
+| .python_tmp/setup_env.py | 155 | Add validation for config parameters |
+| .python_tmp/setup_env.py | 160 | Handle network timeout gracefully |
+| .python_tmp/setup_env.py | 161 | Add support for batch processing |
+| .python_tmp/setup_env.py | 162 | Implement error recovery |
+| .python_tmp/setup_env.py | 166 | Graceful shutdown implementation |
+| .python_tmp/setup_env.py | 178 | Add retry logic for failed requests |
+| .python_tmp/setup_env.py | 179 | Fix memory leak in connection pool |
+| .python_tmp/setup_env.py | 180 | Add connection pooling configuration |
+| .python_tmp/setup_env.py | 184 | Add timeout parameter |
+| .python_tmp/setup_env.py | 185 | Handle SSL certificate errors |
+| .python_tmp/setup_env.py | 186 | Implement exponential backoff |
+| .python_tmp/setup_env.py | 191 | Implement request signing |
+| .python_tmp/setup_env.py | 192 | Add response compression support |
+| .python_tmp/setup_env.py | 197 | Implement concurrent batch processing |
 | module_a.py | 7 | Add input validation for empty data |
 | module_a.py | 8 | Implement caching mechanism for repeated calls |
 | module_a.py | 9 | Add support for streaming data processing |
@@ -31,6 +69,11 @@
 | utils/helpers.py | 3 | add support for multi-threading |
 | utils/helpers.py | 4 | Race condition in concurrent access |
 | utils/helpers.py | 8 | Support custom formatting templates |
+
+### 🧯 FIXME List
+
+| file_path | line_number | content |
+|-----------|-------------|---------|
 
 ## TODO
 
