@@ -1,0 +1,173 @@
+{
+  "basics": {
+    "name": "Junteng Liu",
+    "email": "jliugi@connect.ust.hk",
+    "phone": "",
+    "website": "https://bugmaker00.github.io/LJT-Homepage",
+    "summary": "First-year PhD candidate at HKUST NLP Group, supervised by Prof. Junxian He. Research focuses on natural language processing and machine learning, especially LLM reasoning, reinforcement learning, hallucination in vision-language models (VLM), and LLM truthfulness and interpretability.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Hong Kong",
+      "countryCode": "HK",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "Junteng Liu",
+        "url": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "network": "GitHub",
+        "username": "Vicent0205",
+        "url": "https://github.com/Vicent0205"
+      },
+      {
+        "network": "X",
+        "username": "junteng88716710",
+        "url": "https://x.com/junteng88716710"
+      }
+    ]
+  },
+  "work": [
+    {
+      "institution": "MINIMAX",
+      "area": "Research",
+      "position": "Research Intern",
+      "startDate": "2025-02",
+      "endDate": "Present",
+      "summary": "Research intern working on LLM reasoning and reinforcement learning."
+    },
+    {
+      "institution": "Tencent WXG",
+      "area": "Research",
+      "position": "Research Intern",
+      "startDate": "2024-06",
+      "endDate": "2024-09",
+      "summary": "Research intern at Tencent WeChat Group (WXG), advised by Zifei Shan. Worked on vision-language models."
+    },
+    {
+      "institution": "Shanghai AI Lab",
+      "area": "Research",
+      "position": "Research Intern",
+      "startDate": "2023-06",
+      "endDate": "2023-12",
+      "summary": "Research intern at Shanghai AI Lab, advised by Prof. Yu Cheng. Worked on natural language processing."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Hong Kong University of Science and Technology (HKUST)",
+      "area": "Computer Science",
+      "studyType": "Ph.D.",
+      "startDate": "2024",
+      "endDate": "Present",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "Shanghai Jiao Tong University (SJTU)",
+      "area": "Computer Science",
+      "studyType": "B.Eng.",
+      "startDate": "2020",
+      "endDate": "2024",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Research Areas",
+      "keywords": [
+        "LLM Reasoning",
+        "Reinforcement Learning",
+        "Hallucination in VLM",
+        "LLM Truthfulness",
+        "LLM Interpretability",
+        "Natural Language Processing",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "keywords": [
+        "Python",
+        "C/C++",
+        "Shell"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "keywords": [
+        "PyTorch",
+        "Hugging Face Transformers",
+        "Git",
+        "LaTeX"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional"
+    }
+  ],
+  "interests": [
+    "Large Language Models",
+    "Reasoning",
+    "Reinforcement Learning",
+    "Vision-Language Models",
+    "Model Interpretability",
+    "Natural Language Processing"
+  ],
+  "references": [],
+  "publications": [
+    {
+      "name": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
+      "publisher": "arXiv",
+      "releaseDate": "2025",
+      "website": "https://arxiv.org/abs/2502.03823",
+      "summary": "Synthesizes verifiable reasoning data at scale for learning logical reasoning and beyond."
+    },
+    {
+      "name": "On the Perception Bottleneck of VLMs for Chart Understanding",
+      "publisher": "arXiv",
+      "releaseDate": "2025",
+      "website": "https://github.com/Vicent0205/Vision4Chart",
+      "summary": "Investigates the perception bottleneck of vision-language models for chart understanding."
+    },
+    {
+      "name": "On the Universal Truthfulness Hyperplane Inside LLMs",
+      "publisher": "EMNLP 2024",
+      "releaseDate": "2024",
+      "website": "https://github.com/Vicent0205/Universal_Truthfulness_Hyperplane",
+      "summary": "Discovers a universal truthfulness hyperplane inside large language models, published at EMNLP 2024."
+    },
+    {
+      "name": "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation",
+      "publisher": "ICML 2024",
+      "releaseDate": "2024",
+      "website": "",
+      "summary": "Proposes using in-context sharpness as alerts for hallucination mitigation from an inner representation perspective, published at ICML 2024."
+    },
+    {
+      "name": "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models",
+      "publisher": "NeurIPS 2023",
+      "releaseDate": "2023",
+      "website": "",
+      "summary": "Presents C-Eval, a multi-level multi-discipline Chinese evaluation suite for foundation models, published at NeurIPS 2023."
+    },
+    {
+      "name": "Composing Parameter-Efficient Modules with Arithmetic Operations",
+      "publisher": "NeurIPS 2023",
+      "releaseDate": "2023",
+      "website": "",
+      "summary": "Proposes composing parameter-efficient modules with arithmetic operations, published at NeurIPS 2023."
+    }
+  ]
+}
