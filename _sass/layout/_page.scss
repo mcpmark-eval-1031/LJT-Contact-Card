@@ -1,0 +1,38 @@
+/* ==========================================================================
+   PAGE CONTENT
+   ========================================================================== */
+
+.page {
+  padding: 2em;
+}
+
+.page__inner-wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.page__title {
+  margin-bottom: 1em;
+}
+
+.page__content {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+  a {
+    color: var(--global-link-color);
+  }
+}
+
+.page__meta {
+  margin-bottom: 1em;
+  font-size: $type-size-6;
+  color: var(--global-font-color);
+}
+
+.page__share {
+  margin-top: 2em;
+}

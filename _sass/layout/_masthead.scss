@@ -1,0 +1,23 @@
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--global-bg-color);
+  border-bottom: 1px solid var(--global-border-color);
+  height: $masthead-height;
+}
+
+.masthead__inner-wrap {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.masthead__menu {
+  flex: 1;
+}

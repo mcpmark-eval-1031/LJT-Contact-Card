@@ -1,0 +1,38 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table {
+  margin-bottom: 1em;
+  width: 100%;
+  font-family: $global-font-family;
+  font-size: $type-size-5;
+  border-collapse: collapse;
+}
+
+table + table {
+  margin-top: 1em;
+}
+
+thead {
+  border-bottom: 2px solid var(--global-thead-color);
+}
+
+thead th {
+  font-weight: bold;
+  padding: 0.125em 0.25em;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+tbody tr:last-child {
+  border-bottom: 0;
+}
+
+td {
+  padding: 0.25em;
+  vertical-align: top;
+}

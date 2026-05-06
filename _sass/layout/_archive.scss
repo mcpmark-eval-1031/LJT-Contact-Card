@@ -1,0 +1,21 @@
+/* ==========================================================================
+   ARCHIVE PAGES
+   ========================================================================== */
+
+.archive {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.archive__item {
+  margin-bottom: 2em;
+}
+
+.archive__item-title {
+  margin-bottom: 0.5em;
+}
+
+.archive__item-excerpt {
+  color: var(--global-font-color);
+}

@@ -1,0 +1,27 @@
+.notice {
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: $border-radius;
+  border: 1px solid var(--global-border-color);
+  font-size: $type-size-5;
+}
+
+.notice--primary {
+  background-color: var(--global-theme-color);
+  color: var(--global-font-color);
+}
+
+.notice--info {
+  background-color: var(--global-info-color);
+  color: var(--global-font-color);
+}
+
+.notice--warning {
+  background-color: var(--global-warning-color);
+  color: var(--global-font-color);
+}
+
+.notice--danger {
+  background-color: var(--global-danger-color);
+  color: var(--global-font-color);
+}

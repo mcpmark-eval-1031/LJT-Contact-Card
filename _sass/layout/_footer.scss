@@ -1,0 +1,18 @@
+.page__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--global-bg-color);
+  border-top: 1px solid var(--global-border-color);
+  padding: 1em;
+  font-size: $type-size-6;
+}
+
+.page__footer-follow {
+  margin-bottom: 1em;
+}
+
+.page__footer-copyright {
+  color: var(--global-font-color);
+}

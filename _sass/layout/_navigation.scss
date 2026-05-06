@@ -1,0 +1,34 @@
+.greedy-nav {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.visible-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.masthead__menu-item {
+  margin: 0 0.5em;
+}
+
+.masthead__menu-item--lg {
+  font-weight: bold;
+}
+
+.hidden-links {
+  display: none;
+}
+
+.hidden-links.hidden {
+  display: none;
+}
