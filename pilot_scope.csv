@@ -1,0 +1,2 @@
+hf_repo,file_path,platform,current_license,required_license,issue_reference,review_status,pilot_subset,change_applied,notes
+dongbobo/Annoy-PyEdu-Rs-Raw,README.md,HUGGINGFACE,null,odc-by,bugmaker00/Annoy-DataSync#1,reviewed,yes,applied,"Raw Python educational dataset adopted from HuggingFaceTB/smollm-corpus python-edu (ODC-By 1.0); README has no YAML frontmatter; action: prepend ---\nlicense: odc-by\n--- block"
