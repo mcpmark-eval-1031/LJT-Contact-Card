@@ -7,30 +7,32 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 ## Education
 
-* **Ph.D in Computer Science**, Hong Kong University of Science and Technology (HKUST), 2024 – Present
-* **B.Eng in Computer Science**, Shanghai Jiao Tong University (SJTU), 2020 – 2024  
-  (Zhiyuan Honor Scholarship)
+- **Ph.D. in Computer Science** (2024–Present)
+  - Hong Kong University of Science and Technology (HKUST)
+  - HKUST NLP Group
 
-## Work Experience
+- **B.Eng.** (2020–2024)
+  - Shanghai Jiao Tong University (SJTU)
+  - Received Zhiyuan Honor Scholarship
 
-* **Research Intern** — MINIMAX, Feb 2025 – Present  
-  Research on LLM reasoning and reinforcement learning.
+## Research Experience
 
-* **Research Intern** — Tencent WXG, Jun 2024 – Sep 2024  
-  Research on vision-language models.
-
-* **Research Intern** — Shanghai AI Lab, Jun 2023 – Dec 2023  
-  Research on natural language processing.
+- **Research Intern** at MINIMAX (February 2025 – Present)
+- **Research Intern** at Tencent WXG (June 2024 – September 2024)
+  - Advisor: Zifei Shan
+- **Research Intern** at Shanghai AI Lab (June 2023 – December 2023)
+  - Advisor: Prof. Yu Cheng
 
 ## Skills
 
-* **Programming**: Python, C/C++, Shell
-* **Frameworks**: PyTorch, Hugging Face Transformers
-* **Research Areas**: LLM Reasoning, Reinforcement Learning, Vision-Language Models, Model Interpretability, NLP
+- Natural Language Processing (NLP)
+- Large Language Models (LLMs)
+- Machine Learning
+- Reinforcement Learning
+- Python
+- PyTorch
 
 ## Publications
 
@@ -38,6 +40,6 @@ redirect_from:
   {% include archive-single-cv.html %}
 {% endfor %}</ul>
 
----
+## Service and Leadership
 
-*Download my full CV [here](/files/cv.pdf) (coming soon).*
+- Zhiyuan Honor Scholarship, Shanghai Jiao Tong University
