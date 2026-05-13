@@ -1,27 +1,21 @@
+# Ignore python tmp directory
+.python_tmp/
+
 # Jekyll
-_site/
 .sass-cache
+.jekyll-assets-cache
 .jekyll-cache
-.jekyll-metadata
-*.lock
+.bundle
+.asset-cache
 
-# Rake
-tasks/
+# Logs and temp files
+log
+tmp
 
-# Bundle
-vendor/
-.bundle/
-
-# Jekyll preview / cache
-.jekyll-cache/
-
-# Code editor
-.vscode/
-.idea/
+# IDE
+*.sublime-project
+*.sublime-workspace
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Node
-node_modules/
