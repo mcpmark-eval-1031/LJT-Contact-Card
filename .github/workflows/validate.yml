@@ -1,0 +1,42 @@
+name: Validate verl_deepscaler.parquet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  convert-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas pyarrow datasets jsonschema requests
+
+      - name: Download ground truth data
+        run: |
+          mkdir -p groundtruth_workspace
+          curl -L -o groundtruth_workspace/deepscaler.json \
+            https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/tasks/finalpool/verl-dataset/groundtruth_workspace/deepscaler.json
+          curl -L -o groundtruth_workspace/expected_dataset_info.json \
+            https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/tasks/finalpool/verl-dataset/groundtruth_workspace/expected_dataset_info.json
+          ls -la groundtruth_workspace/
+
+      - name: Run conversion and validation
+        run: |
+          python convert_and_validate.py
+
+      - name: Upload parquet artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verl_deepscaler
+          path: verl_deepscaler.parquet
