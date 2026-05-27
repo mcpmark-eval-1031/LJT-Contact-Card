@@ -1,135 +1,194 @@
 import json
 import os
 import sys
-import pandas as pd
-import numpy as np
 import requests
+import pyarrow as pa
+import pyarrow.parquet as pq
 from pathlib import Path
 
-# Use GitHub workspace or current directory
 WORKSPACE = Path(os.environ.get("GITHUB_WORKSPACE", "."))
 FORMAT_JSON = WORKSPACE / "format.json"
 OUTPUT_PARQUET = WORKSPACE / "verl_deepscaler.parquet"
 GROUNDTRUTH_DIR = WORKSPACE / "groundtruth_workspace"
+GT_JSON = GROUNDTRUTH_DIR / "deepscaler.json"
+GT_INFO = GROUNDTRUTH_DIR / "expected_dataset_info.json"
+
+PARQUET_SCHEMA = pa.schema([
+    pa.field("data_source",  pa.utf8()),
+    pa.field("prompt",       pa.list_(pa.struct([
+                                pa.field("role",    pa.utf8()),
+                                pa.field("content", pa.utf8()),
+                              ]))),
+    pa.field("ability",      pa.utf8()),
+    pa.field("reward_model", pa.struct([
+                                pa.field("style",        pa.utf8()),
+                                pa.field("ground_truth", pa.utf8()),
+                              ])),
+    pa.field("extra_info",   pa.struct([
+                                pa.field("index",    pa.int64()),
+                                pa.field("solution", pa.utf8()),
+                              ])),
+])
 
 
 def download_file(url, dest):
-    """Download a file from URL to destination."""
     print(f"Downloading {url} -> {dest}")
     resp = requests.get(url, stream=True, timeout=120)
     resp.raise_for_status()
     with open(dest, "wb") as f:
         for chunk in resp.iter_content(chunk_size=8192):
             f.write(chunk)
-    print(f"Downloaded {dest} ({dest.stat().st_size} bytes)")
+    print(f"  Downloaded {dest} ({dest.stat().st_size:,} bytes)")
 
 
 def ensure_groundtruth():
-    """Ensure ground truth files are available."""
     GROUNDTRUTH_DIR.mkdir(parents=True, exist_ok=True)
-    gt_json = GROUNDTRUTH_DIR / "deepscaler.json"
-    gt_info = GROUNDTRUTH_DIR / "expected_dataset_info.json"
-
-    if not gt_json.exists() or gt_json.stat().st_size < 1000:
+    if not GT_JSON.exists() or GT_JSON.stat().st_size < 1000:
         download_file(
-            "https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/tasks/finalpool/verl-dataset/groundtruth_workspace/deepscaler.json",
-            gt_json,
+            "https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/"
+            "tasks/finalpool/verl-dataset/groundtruth_workspace/deepscaler.json",
+            GT_JSON,
         )
-    if not gt_info.exists():
+    else:
+        print(f"  [skip] {GT_JSON} already exists")
+    if not GT_INFO.exists():
         download_file(
-            "https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/tasks/finalpool/verl-dataset/groundtruth_workspace/expected_dataset_info.json",
-            gt_info,
+            "https://raw.githubusercontent.com/hkust-nlp/Toolathlon/main/"
+            "tasks/finalpool/verl-dataset/groundtruth_workspace/expected_dataset_info.json",
+            GT_INFO,
         )
-    return gt_json, gt_info
+    else:
+        print(f"  [skip] {GT_INFO} already exists")
 
 
 def load_format_schema():
-    """Load and return the format.json schema."""
     with open(FORMAT_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
+def convert_dataset_to_parquet():
+    """
+    关键修复：使用 pyarrow 原生 schema，将 prompt / reward_model / extra_info
+    以 list<struct> / struct 形式写入 parquet，不再 json.dumps() 序列化为字符串。
+    """
+    with open(GT_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    print(f"Loaded {len(data)} items from ground truth")
+
+    data_sources  = []
+    prompts       = []
+    abilities     = []
+    reward_models = []
+    extra_infos   = []
+
+    for idx, item in enumerate(data):
+        problem  = item.get("problem",  "").strip()
+        answer   = item.get("answer",   "").strip()
+        solution = item.get("solution", "").strip()
+
+        # ★ 核心修复：使用原生 Python 类型（list / dict），而非 JSON 字符串
+        data_sources.append("DeepScaleR")
+        prompts.append([{"role": "user", "content": problem}])
+        abilities.append("math")
+        reward_models.append({"style": "rule", "ground_truth": answer})
+        extra_infos.append({"index": idx, "solution": solution})
+
+    arr_ds   = pa.array(data_sources,  type=pa.utf8())
+    arr_pr   = pa.array(prompts,       type=pa.list_(pa.struct([
+                                            pa.field("role",    pa.utf8()),
+                                            pa.field("content", pa.utf8()),
+                                          ])))
+    arr_ab   = pa.array(abilities,     type=pa.utf8())
+    arr_rm   = pa.array(reward_models, type=pa.struct([
+                                            pa.field("style",        pa.utf8()),
+                                            pa.field("ground_truth", pa.utf8()),
+                                          ]))
+    arr_ei   = pa.array(extra_infos,   type=pa.struct([
+                                            pa.field("index",    pa.int64()),
+                                            pa.field("solution", pa.utf8()),
+                                          ]))
+
+    table = pa.table(
+        {
+            "data_source":  arr_ds,
+            "prompt":       arr_pr,
+            "ability":      arr_ab,
+            "reward_model": arr_rm,
+            "extra_info":   arr_ei,
+        },
+        schema=PARQUET_SCHEMA,
+    )
+
+    pq.write_table(table, OUTPUT_PARQUET)
+    print(f"Wrote {table.num_rows:,} rows to {OUTPUT_PARQUET}")
+    return table
+
+
 def validate_against_schema(df, schema):
-    """
-    Validate each row of the DataFrame against the format.json schema.
-    Returns a list of error strings.
-    """
     errors = []
 
     for i in range(len(df)):
         row = df.iloc[i]
 
-        # 1. data_source must be string "DeepScaleR"
         ds = row.get("data_source")
         if not isinstance(ds, str) or ds != "DeepScaleR":
             errors.append(f"Row {i}: data_source must be 'DeepScaleR', got {repr(ds)}")
 
-        # 2. prompt must be a list, first element dict with role=='user' and non-empty content string
         prompt = row.get("prompt")
         try:
             if isinstance(prompt, str):
                 prompt = json.loads(prompt)
-            elif isinstance(prompt, np.ndarray):
+            elif hasattr(prompt, "tolist"):
                 prompt = prompt.tolist()
         except Exception as e:
-            errors.append(f"Row {i}: prompt is not valid JSON: {e}")
+            errors.append(f"Row {i}: prompt parse error: {e}")
             continue
 
         if not isinstance(prompt, list) or len(prompt) == 0:
-            errors.append(f"Row {i}: prompt must be a non-empty list")
+            errors.append(f"Row {i}: prompt must be non-empty list")
             continue
 
         first = prompt[0]
         if not isinstance(first, dict):
-            errors.append(f"Row {i}: prompt[0] must be a dict")
+            errors.append(f"Row {i}: prompt[0] must be dict")
             continue
-
         if first.get("role") != "user":
-            errors.append(f"Row {i}: prompt[0].role must be 'user', got {repr(first.get('role'))}")
+            errors.append(f"Row {i}: prompt[0].role must be 'user'")
+        if not isinstance(first.get("content"), str) or not first.get("content").strip():
+            errors.append(f"Row {i}: prompt[0].content must be non-empty string")
 
-        content = first.get("content")
-        if not isinstance(content, str) or len(content.strip()) == 0:
-            errors.append(f"Row {i}: prompt[0].content must be a non-empty string")
-
-        # 3. ability must be string "math"
         ability = row.get("ability")
         if not isinstance(ability, str) or ability != "math":
             errors.append(f"Row {i}: ability must be 'math', got {repr(ability)}")
 
-        # 4. reward_model must be dict with ground_truth
         rm = row.get("reward_model")
         try:
             if isinstance(rm, str):
                 rm = json.loads(rm)
         except Exception as e:
-            errors.append(f"Row {i}: reward_model is not valid JSON: {e}")
+            errors.append(f"Row {i}: reward_model parse error: {e}")
             continue
-
         if not isinstance(rm, dict):
-            errors.append(f"Row {i}: reward_model must be a dict")
+            errors.append(f"Row {i}: reward_model must be dict")
             continue
-
+        if rm.get("style") != "rule":
+            errors.append(f"Row {i}: reward_model.style must be 'rule'")
         if "ground_truth" not in rm:
             errors.append(f"Row {i}: reward_model missing 'ground_truth'")
         elif not isinstance(rm["ground_truth"], str):
-            errors.append(f"Row {i}: reward_model.ground_truth must be a string")
+            errors.append(f"Row {i}: reward_model.ground_truth must be str")
 
-        if rm.get("style") != "rule":
-            errors.append(f"Row {i}: reward_model.style must be 'rule', got {repr(rm.get('style'))}")
-
-        # 5. extra_info must be dict with index and solution
         ei = row.get("extra_info")
         try:
             if isinstance(ei, str):
                 ei = json.loads(ei)
         except Exception as e:
-            errors.append(f"Row {i}: extra_info is not valid JSON: {e}")
+            errors.append(f"Row {i}: extra_info parse error: {e}")
             continue
-
         if not isinstance(ei, dict):
-            errors.append(f"Row {i}: extra_info must be a dict")
+            errors.append(f"Row {i}: extra_info must be dict")
             continue
-
         if "index" not in ei:
             errors.append(f"Row {i}: extra_info missing 'index'")
         if "solution" not in ei:
@@ -138,59 +197,55 @@ def validate_against_schema(df, schema):
     return errors
 
 
-def convert_dataset_to_parquet():
-    """Load ground truth and convert to verl parquet format."""
-    gt_json, gt_info = ensure_groundtruth()
-
-    with open(gt_json, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    print(f"Loaded {len(data)} items from ground truth")
-
-    records = []
-    for idx, item in enumerate(data):
-        problem = item.get("problem", "").strip()
-        answer = item.get("answer", "").strip()
-        solution = item.get("solution", "").strip()
-
-        record = {
-            "data_source": "DeepScaleR",
-            "prompt": json.dumps([{"role": "user", "content": problem}]),
-            "ability": "math",
-            "reward_model": json.dumps({"style": "rule", "ground_truth": answer}),
-            "extra_info": json.dumps({"index": idx, "solution": solution}),
-        }
-        records.append(record)
-
-    df = pd.DataFrame(records)
-    df.to_parquet(OUTPUT_PARQUET, index=False)
-    print(f"Wrote {len(df)} rows to {OUTPUT_PARQUET}")
-    return df
+def verify_schema(table):
+    actual   = table.schema
+    expected = PARQUET_SCHEMA
+    errors   = []
+    for field in expected:
+        af = actual.field(field.name)
+        ef = field
+        if af.type != ef.type:
+            errors.append(
+                f"  FAIL  '{ef.name}': expected {ef.type}, got {af.type}"
+            )
+    if errors:
+        print("SCHEMA MISMATCH:")
+        for e in errors:
+            print(e)
+        return False
+    print("SCHEMA OK — all field types match PARQUET_SCHEMA")
+    return True
 
 
 def main():
     print("=== Step 1: Converting dataset to parquet ===")
-    df = convert_dataset_to_parquet()
+    table = convert_dataset_to_parquet()
 
     print("\n=== Step 2: Loading format schema ===")
     schema = load_format_schema()
-    print("Schema loaded:", json.dumps(schema, indent=2))
+    print("Schema:", json.dumps(schema, indent=2))
 
-    print("\n=== Step 3: Validating against schema ===")
+    print("\n=== Step 3: Verifying schema (pyarrow types) ===")
+    schema_ok = verify_schema(table)
+
+    print("\n=== Step 4: Validating content against schema ===")
+    import pandas as pd
+    df = table.to_pandas()
     errors = validate_against_schema(df, schema)
 
     if errors:
-        print(f"\nVALIDATION FAILED: {len(errors)} error(s) found")
-        print("=" * 60)
-        for err in errors[:50]:  # Show first 50 errors
+        print(f"\nVALIDATION FAILED: {len(errors)} error(s)")
+        for err in errors[:20]:
             print(err)
-        if len(errors) > 50:
-            print(f"... and {len(errors) - 50} more errors")
-        print("=" * 60)
         sys.exit(1)
     else:
-        print("\nVALIDATION PASSED: All rows conform to format.json")
-        sys.exit(0)
+        print("CONTENT OK — all rows conform to format.json")
+
+    if schema_ok:
+        print("\nALL CHECKS PASSED")
+    else:
+        print("\nSCHEMA CHECK FAILED")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
