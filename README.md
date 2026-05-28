@@ -1,1 +1,3 @@
-IyBDb250YWN0IENhcmQKCkFzc2VtYmxlZCBmcm9tIHN0b3JlZCBwcm9maWxlIG5vdGVzLg==
+# Contact Card
+
+This card was assembled from stored profile notes.
